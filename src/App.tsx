@@ -1,16 +1,18 @@
-import React from 'react';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
-import Navbar from './components/layout/LayoutHeader';
-import Footer from './components/layout/Footer';
-import Main from './pages/Main';
+
+import Astropro1 from './routes/astropro1';
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Main />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path = "/astropro1" element = {<Astropro1 />} />
+        </Routes>
+      </div>
+    </Router>
+
   );
 }
 

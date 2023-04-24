@@ -22,8 +22,8 @@ const Main = () => {
                         </div>
                         <div className="flex flex-col gap-1">
                             <div className="flex gap-4 text-3xl items-center font-bold">
-                                <p className="bg-[#ffff00] py-2 px-4 rounded-lg">9,99€</p>
-                                <p className="line-through">29,99€</p>
+                                <p className="bg-[#ffff00] py-2 px-4 rounded-lg">3€</p>
+                                <p className="line-through">19,99€</p>
                             </div>
                             <img src={germanImg} className="h-8 w-64" alt="" />
                             <img src={clockImg} className="h-8 w-64" alt="" />
