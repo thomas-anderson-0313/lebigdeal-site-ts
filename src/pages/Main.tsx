@@ -62,9 +62,8 @@ const Main = () => {
                 </p>
                 <div className="px-12 max-sm:px-0 flex flex-col gap-12 py-12 items-center justify-center">
                     {IntroductionData.map((item: any, index: any) => {
-                        return <ImageIntroduction image={index + 1} title={item.title} />
+                        return <ImageIntroduction key={`intro-${index}`} image={item.image} title={item.title} />
                     })}
-                    <img src={require("../assets/img/png/6.webp")} className="w-96 h-96" alt="" />
                 </div>
                 <div className="px-12 max-sm:px-0 flex flex-col gap-4 ">
                     <p className="font-bold text-lg ">Détail du Produit :</p>
@@ -96,168 +95,111 @@ const Main = () => {
                     </div>
                 </div>
                 <div className="grid grid-cols-4 gap-2 py-12 max-xl:grid-cols-3 max-lg:grid-cols-1">
-                    <div>
-                        <div className="border border-gray-300 rounded-xl px-4 py-6 flex flex-col gap-4">
-                            <div className="flex gap-2 items-center">
-                                <p className="text-lg font-bold">Yannick </p>
-                                <p className="text-sm">Vérifié  </p>
-                            </div>
-                            <SmallRatingStar size="sm" />
-                            <p>Tout fonctionne très bien, le cric est assez puissant pour soulever mon audi A4 sans problème, top</p>
-                            <img src={require("../assets/img/jpg/client1.jpg")} className="" alt="" />
-                            <p className="text-right text-sm">il y a 2 semaines</p>
+
+                    <div className="border border-gray-300 rounded-xl px-4 py-6 flex flex-col gap-4">
+                        <div className="flex gap-2 items-center">
+                            <p className="text-lg font-bold">Yannick D</p>
+                            <p className="text-sm">Vérifié  </p>
                         </div>
+                        <SmallRatingStar size="sm" />
+                        <p>Tout fonctionne très bien, le cric est assez puissant pour soulever mon audi A4 sans problème, top</p>
+                        <img src={require("../assets/img/png/client1.webp")} className="" alt="" />
+                        <p className="text-right text-sm">il y a 2 semaines</p>
                     </div>
-                    <div>
-                        <div className="grid grid-rows-2 gap-2">
-                            <div className="border border-gray-300 rounded-xl px-4 py-6 flex flex-col gap-4">
-                                <div className="flex gap-2 items-center">
-                                    <p className="text-lg font-bold">Jerome Grassier </p>
-                                    <p className="text-sm">Vérifié  </p>
-                                </div>
-                                <SmallRatingStar size="sm" />
-                                <p>Produit conforme à la description, facile à utiliser, livraison rapide ! Réduit considérablement le temps de travail. J'achèterai à nouveau chez ce vendeur sans hésitation.</p>
-                                <img src={require("../assets/img/jpg/client2.jpg")} className="" alt="" />
-                                <p className="text-right text-sm">il y a 2 semaines</p>
-                            </div>
-                            <div className="border border-gray-300 rounded-xl px-4 py-6 flex flex-col gap-4">
-                                <div className="flex gap-2 items-center">
-                                    <p className="text-lg font-bold">Antoine Robin</p>
-                                    <p className="text-sm">Vérifié  </p>
-                                </div>
-                                <SmallRatingStar size="sm" />
-                                <p>Le cric fonctionne très bien. Il est très silencieux par rapport à un autre cric électrique que j'ai essayé. Je ne peux pas en dire plus sur la clé à chocs.</p>
-                                <img src={require("../assets/img/jpg/client3.jpg")} className="" alt="" />
-                                <p className="text-right text-sm">il y a 2 semaines</p>
-                            </div>
+                    <div className="border border-gray-300 rounded-xl px-4 py-6 flex flex-col gap-4">
+                        <div className="flex gap-2 items-center">
+                            <p className="text-lg font-bold">Jerome Grassier </p>
+                            <p className="text-sm">Vérifié  </p>
                         </div>
+                        <SmallRatingStar size="sm" />
+                        <p>Produit conforme à la description, facile à utiliser, livraison rapide ! Réduit considérablement le temps de travail. J'achèterai à nouveau chez ce vendeur sans hésitation.</p>
+                        <img src={require("../assets/img/png/client2.webp")} className="" alt="" />
+                        <p className="text-right text-sm">il y a 2 semaines</p>
                     </div>
-                    <div>
-                        <div className="border border-gray-300 rounded-xl px-4 py-6 flex flex-col gap-4">
-                            <div className="flex gap-2 items-center">
-                                <p className="text-lg font-bold">Jonathan Loirat </p>
-                                <p className="text-sm">Vérifié  </p>
-                            </div>
-                            <SmallRatingStar size="sm" />
-                            <p>Ce petit kit est un outil très puissant. Je dois dire que j'ai lu les commentaires sur ce produit et regardé les vidéos et que j'avais encore des doutes sur ses capacités, mais j'ai pensé que cela valait la peine d'essayer. En ce moment, je suis surpris de voir à quel point il est puissant et facile à utiliser. Il a soulevé la roue avant de ma clio sans aucun soucis, excellent !</p>
-                            <img src={require("../assets/img/jpg/client4.jpg")} className="" alt="" />
-                            <p className="text-right text-sm">il y a 2 semaines</p>
+                    <div className="border border-gray-300 rounded-xl px-4 py-6 flex flex-col gap-4">
+                        <div className="flex gap-2 items-center">
+                            <p className="text-lg font-bold">Antoine Robin</p>
+                            <p className="text-sm">Vérifié  </p>
                         </div>
+                        <SmallRatingStar size="sm" />
+                        <p>Le cric fonctionne très bien. Il est très silencieux par rapport à un autre cric électrique que j'ai essayé. Je ne peux pas en dire plus sur la clé à chocs.</p>
+                        <img src={require("../assets/img/png/client10.webp")} className="" alt="" />
+                        <p className="text-right text-sm">il y a 2 semaines</p>
                     </div>
-                    <div className="grid grid-row-6 gap-2 max-xl:hidden">
-                        <div className="border border-gray-300 rounded-xl px-4 py-6 flex flex-col gap-4">
-                            <div className="flex gap-2 items-center">
-                                <p className="text-lg font-bold">Jérémy Grossier </p>
-                                <p className="text-sm">Vérifié  </p>
-                            </div>
-                            <SmallRatingStar size="sm" />
-                            <p>produit bien fini et fonctionne parfaitement, je suis content de mon achat</p>
-                            <p className="text-right text-sm">il y a 2 semaines</p>
+                    <div className="border border-gray-300 rounded-xl px-4 py-6 flex flex-col gap-4">
+                        <div className="flex gap-2 items-center">
+                            <p className="text-lg font-bold">Jonathan Loirat </p>
+                            <p className="text-sm">Vérifié  </p>
                         </div>
-                        <div className="border border-gray-300 rounded-xl px-4 py-6 flex flex-col gap-4">
-                            <div className="flex gap-2 items-center">
-                                <p className="text-lg font-bold">Amine Youssef  </p>
-                                <p className="text-sm">Vérifié  </p>
-                            </div>
-                            <SmallRatingStar size="sm" />
-                            <p>Le produit fonctionne vraiment bien, pour le prix vous pouvez y aller les yeux fermés</p>
-                            <p className="text-right text-sm">il y a 2 semaines</p>
-                        </div>
-                        <div className="border border-gray-300 rounded-xl px-4 py-6 flex flex-col gap-4">
-                            <div className="flex gap-2 items-center">
-                                <p className="text-lg font-bold">Frederic Basnas </p>
-                                <p className="text-sm">Vérifié  </p>
-                            </div>
-                            <SmallRatingStar size="sm" />
-                            <p>Le bigdeal est sérieux et j'ai été livré en belgique dans les 48h vraiment pratique</p>
-                            <p className="text-right text-sm">il y a 2 semaines</p>
-                        </div>
-                        <div className="border border-gray-300 rounded-xl px-4 py-6 flex flex-col gap-4">
-                            <div className="flex gap-2 items-center">
-                                <p className="text-lg font-bold">Martin Leroy</p>
-                                <p className="text-sm">Vérifié  </p>
-                            </div>
-                            <SmallRatingStar size="sm" />
-                            <p>Je l'utilise depuis quelques semaines, vraiment sympa silencieux et efficace</p>
-                            <p className="text-right text-sm">il y a 2 semaines</p>
-                        </div>
-                        <div className="border border-gray-300 rounded-xl px-4 py-6 flex flex-col gap-4">
-                            <div className="flex gap-2 items-center">
-                                <p className="text-lg font-bold">Isaac Cohen </p>
-                                <p className="text-sm">Vérifié  </p>
-                            </div>
-                            <SmallRatingStar size="sm" />
-                            <p>Bien pratique et pour le prix ca vaut le coup de le prendre et de laisser dans la voiture</p>
-                            <p className="text-right text-sm">il y a 2 semaines</p>
-                        </div>
-                        <div className="border border-gray-300 rounded-xl px-4 py-6 flex flex-col gap-4">
-                            <div className="flex gap-2 items-center">
-                                <p className="text-lg font-bold">Romain Brou</p>
-                                <p className="text-sm">Vérifié  </p>
-                            </div>
-                            <SmallRatingStar size="sm" />
-                            <p>Agréablement surpris ! le cric est puissant, avec des belles finitions</p>
-                            <p className="text-right text-sm">il y a 2 semaines</p>
-                        </div>
+                        <SmallRatingStar size="sm" />
+                        <p>Ce petit kit est un outil très puissant. Je dois dire que j'ai lu les commentaires sur ce produit et regardé les vidéos et que j'avais encore des doutes sur ses capacités, mais j'ai pensé que cela valait la peine d'essayer. En ce moment, je suis surpris de voir à quel point il est puissant et facile à utiliser. Il a soulevé la roue avant de ma clio sans aucun soucis, excellent !</p>
+                        <img src={require("../assets/img/png/client4.webp")} className="" alt="" />
+                        <p className="text-right text-sm">il y a 2 semaines</p>
                     </div>
 
-                </div>
-                <div className="hidden grid-cols-1 gap-2 max-xl:grid">
-                        <div className="border border-gray-300 rounded-xl px-4 py-6 flex flex-col gap-4">
-                            <div className="flex gap-2 items-center">
-                                <p className="text-lg font-bold">Jérémy Grossier </p>
-                                <p className="text-sm">Vérifié  </p>
-                            </div>
-                            <SmallRatingStar size="sm" />
-                            <p>produit bien fini et fonctionne parfaitement, je suis content de mon achat</p>
-                            <p className="text-right text-sm">il y a 2 semaines</p>
+                    <div className="border border-gray-300 rounded-xl px-4 py-6 flex flex-col gap-4">
+                        <div className="flex gap-2 items-center">
+                            <p className="text-lg font-bold">Jérémy Grossier </p>
+                            <p className="text-sm">Vérifié  </p>
                         </div>
-                        <div className="border border-gray-300 rounded-xl px-4 py-6 flex flex-col gap-4">
-                            <div className="flex gap-2 items-center">
-                                <p className="text-lg font-bold">Amine Youssef  </p>
-                                <p className="text-sm">Vérifié  </p>
-                            </div>
-                            <SmallRatingStar size="sm" />
-                            <p>Le produit fonctionne vraiment bien, pour le prix vous pouvez y aller les yeux fermés</p>
-                            <p className="text-right text-sm">il y a 2 semaines</p>
-                        </div>
-                        <div className="border border-gray-300 rounded-xl px-4 py-6 flex flex-col gap-4">
-                            <div className="flex gap-2 items-center">
-                                <p className="text-lg font-bold">Frederic Basnas </p>
-                                <p className="text-sm">Vérifié  </p>
-                            </div>
-                            <SmallRatingStar size="sm" />
-                            <p>Le bigdeal est sérieux et j'ai été livré en belgique dans les 48h vraiment pratique</p>
-                            <p className="text-right text-sm">il y a 2 semaines</p>
-                        </div>
-                        <div className="border border-gray-300 rounded-xl px-4 py-6 flex flex-col gap-4">
-                            <div className="flex gap-2 items-center">
-                                <p className="text-lg font-bold">Martin Leroy</p>
-                                <p className="text-sm">Vérifié  </p>
-                            </div>
-                            <SmallRatingStar size="sm" />
-                            <p>Je l'utilise depuis quelques semaines, vraiment sympa silencieux et efficace</p>
-                            <p className="text-right text-sm">il y a 2 semaines</p>
-                        </div>
-                        <div className="border border-gray-300 rounded-xl px-4 py-6 flex flex-col gap-4">
-                            <div className="flex gap-2 items-center">
-                                <p className="text-lg font-bold">Isaac Cohen </p>
-                                <p className="text-sm">Vérifié  </p>
-                            </div>
-                            <SmallRatingStar size="sm" />
-                            <p>Bien pratique et pour le prix ca vaut le coup de le prendre et de laisser dans la voiture</p>
-                            <p className="text-right text-sm">il y a 2 semaines</p>
-                        </div>
-                        <div className="border border-gray-300 rounded-xl px-4 py-6 flex flex-col gap-4">
-                            <div className="flex gap-2 items-center">
-                                <p className="text-lg font-bold">Romain Brou</p>
-                                <p className="text-sm">Vérifié  </p>
-                            </div>
-                            <SmallRatingStar size="sm" />
-                            <p>Agréablement surpris ! le cric est puissant, avec des belles finitions</p>
-                            <p className="text-right text-sm">il y a 2 semaines</p>
-                        </div>
+                        <SmallRatingStar size="sm" />
+                        <p>produit bien fini et fonctionne parfaitement, je suis content de mon achat</p>
+                        <img src={require("../assets/img/png/client5.webp")} className="" alt="" />
+                        <p className="text-right text-sm">il y a 2 semaines</p>
                     </div>
+                    <div className="border border-gray-300 rounded-xl px-4 py-6 flex flex-col gap-4">
+                        <div className="flex gap-2 items-center">
+                            <p className="text-lg font-bold">Amine Youssef  </p>
+                            <p className="text-sm">Vérifié  </p>
+                        </div>
+                        <SmallRatingStar size="sm" />
+                        <p>Le produit fonctionne vraiment bien, pour le prix vous pouvez y aller les yeux fermés</p>
+                        <img src={require("../assets/img/png/client6.webp")} className="" alt="" />
+                        <p className="text-right text-sm">il y a 2 semaines</p>
+                    </div>
+                    <div className="border border-gray-300 rounded-xl px-4 py-6 flex flex-col gap-4">
+                        <div className="flex gap-2 items-center">
+                            <p className="text-lg font-bold">Frederic Basnas </p>
+                            <p className="text-sm">Vérifié  </p>
+                        </div>
+                        <SmallRatingStar size="sm" />
+                        <p>Le bigdeal est sérieux et j'ai été livré en belgique dans les 48h vraiment pratique</p>
+                        <img src={require("../assets/img/png/client7.webp")} className="" alt="" />
+                        <p className="text-right text-sm">il y a 2 semaines</p>
+                    </div>
+                    <div className="border border-gray-300 rounded-xl px-4 py-6 flex flex-col gap-4">
+                        <div className="flex gap-2 items-center">
+                            <p className="text-lg font-bold">Martin Leroy</p>
+                            <p className="text-sm">Vérifié  </p>
+                        </div>
+                        <SmallRatingStar size="sm" />
+                        <p>Je l'utilise depuis quelques semaines, vraiment sympa silencieux et efficace</p>
+                        <img src={require("../assets/img/png/client8.webp")} className="" alt="" />
+                        <p className="text-right text-sm">il y a 2 semaines</p>
+                    </div>
+                    <div className="border border-gray-300 rounded-xl px-4 py-6 flex flex-col gap-4">
+                        <div className="flex gap-2 items-center">
+                            <p className="text-lg font-bold">Isaac Cohen </p>
+                            <p className="text-sm">Vérifié  </p>
+                        </div>
+                        <SmallRatingStar size="sm" />
+                        <p>Bien pratique et pour le prix ca vaut le coup de le prendre et de laisser dans la voiture</p>
+                        <img src={require("../assets/img/png/client9.webp")} className="" alt="" />
+                        <p className="text-right text-sm">il y a 2 semaines</p>
+                    </div>
+                    <div className="border border-gray-300 rounded-xl px-4 py-6 flex flex-col gap-4">
+                        <div className="flex gap-2 items-center">
+                            <p className="text-lg font-bold">Romain Brou</p>
+                            <p className="text-sm">Vérifié  </p>
+                        </div>
+                        <SmallRatingStar size="sm" />
+                        <p>Agréablement surpris ! le cric est puissant, avec des belles finitions</p>
+                        <img src={require("../assets/img/png/client3.webp")} className="" alt="" />
+                        <p className="text-right text-sm">il y a 2 semaines</p>
+                    </div>
+
+
+                </div>
             </div>
         </div>
     )

@@ -1,28 +1,14 @@
 import { cart, logo } from "../../consts";
+import CountDownTimer from "../CountDownTimer";
 
 const Navbar = () => {
     return (
         <div>
-            <div className="bg-black text-white px-12 max-sm:px-6 py-2 flex justify-center items-center gap-2 font-mono max-lg:flex-col">
+            <div className="bg-black text-white px-12 max-sm:px-6 py-2 flex justify-center items-center gap-6 items-center max-lg:gap-2 font-mono max-lg:flex-col">
                 <p className="text-center text-2xl">NOS OFFRES SE TERMINENT À MINUIT!
                 </p>
-                <div className="grid grid-flow-col gap-3 text-center auto-cols-max">
-                    <div className="flex flex-col p-2 text-neutral bg-white rounded-md text-neutral-content">
-                        <span className="countdown font-mono text-xl">
-                            <span>23</span>
-                        </span>
-                    </div>
-                    <div className="flex flex-col p-2 text-neutral bg-white rounded-md text-neutral-content">
-                        <span className="countdown font-mono text-xl">
-                            <span>23</span>
-                        </span>
-                    </div>
-                    <div className="flex flex-col p-2 text-neutral bg-white rounded-md text-neutral-content">
-                        <span className="countdown font-mono text-xl">
-                            <span>23</span>
-                        </span>
-                    </div>
-                </div>
+
+                <CountDownTimer />
             </div>
             <div className="px-12 max-sm:px-6 flex justify-between py-6 border-b border-gray-300">
                 <div className="flex gap-12 items-center font-semibold text-lg">
