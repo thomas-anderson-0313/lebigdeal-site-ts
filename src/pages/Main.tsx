@@ -11,7 +11,7 @@ const Main = () => {
         <div className="container mx-auto px-12 max-sm:px-6 py-6">
             <p>Accueil / Kit Cric Électrique Pour Voiture - LeBigDeal</p>
             <div className="px-12 max-xl:px-0 py-12 flex gap-24 max-xl:flex-col">
-                <ImageViewer />
+                <ImageViewer /> 
                 <div>
                     <div className="flex flex-col gap-6">
                         <div className="flex flex-col gap-4">
